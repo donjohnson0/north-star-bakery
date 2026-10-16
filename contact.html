@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | North Star Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="contact-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <p>North Star Bakery</p>
+    <h1>Contact and preorder requests</h1>
+  </header>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Bakery products</a></li>
+      <li><a href="about.html">About our bakery</a></li>
+      <li><a href="contact.html" aria-current="page">Contact and preorder requests</a></li>
+    </ul>
+  </nav>
+  <main id="main-content">
+    <section>
+      <h2>Visit us</h2>
+      <p>Sample location: 100 Main Street, Neighborhood Center.</p>
+      <h3>Sample hours of operation</h3>
+      <ul>
+        <li>Tuesday–Saturday: 7 a.m.–3 p.m.</li>
+        <li>Sunday: 8 a.m.–noon</li>
+        <li>Monday: Closed</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Send an inquiry</h2>
+      <p>This practice form checks your entries and does not send
+        an order. Required fields are marked “required.”</p>
+      <form action="contact.html" method="get">
+        <fieldset>
+          <legend>Your contact information</legend>
+          <p>
+            <label for="customer-name">Name (required)</label>
+            <input id="customer-name" name="customer-name" type="text" autocomplete="name" minlength="2" maxlength="80" required aria-describedby="customer-name-error">
+          <span id="customer-name-error" class="field-error" aria-live="polite"></span></p>
+          <p>
+            <label for="email">Email (required)</label>
+            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+          <span id="email-error" class="field-error" aria-live="polite"></span></p>
+        </fieldset>
+        <fieldset>
+          <legend>Your request</legend>
+          <p>
+            <label for="request-type">Request type (required)</label>
+            <select id="request-type" name="request-type" required aria-describedby="request-type-error">
+              <option value="">Choose a request type</option>
+              <option value="preorder">Preorder request</option>
+              <option value="question">General question</option>
+            </select>
+          <span id="request-type-error" class="field-error" aria-live="polite"></span></p>
+          <p>
+            <label for="pickup-date">Preferred pickup date</label>
+            <input id="pickup-date" name="pickup-date" type="date" aria-describedby="pickup-help pickup-date-error">
+          <span id="pickup-date-error" class="field-error" aria-live="polite"></span></p>
+          <p id="pickup-help">For preorders, choose a preferred date;
+            the bakery must confirm availability.</p>
+          <p>
+            <label for="item-details">Item details or question (required)</label>
+            <textarea id="item-details" name="item-details" rows="5" minlength="10" maxlength="1500" required aria-describedby="item-details-error"></textarea>
+          <span id="item-details-error" class="field-error" aria-live="polite"></span></p>
+          <p>
+            <label for="allergy-notes">Allergy notes (optional)</label>
+            <textarea id="allergy-notes" name="allergy-notes" rows="3" maxlength="500" aria-describedby="allergy-help allergy-notes-error"></textarea>
+          <span id="allergy-notes-error" class="field-error" aria-live="polite"></span></p>
+          <p id="allergy-help">Tell us about allergy concerns so we can discuss
+            ingredients and preparation before confirming an order.</p>
+        </fieldset>
+        <button type="submit">Check my request</button>
+      <p id="form-status" role="status" aria-live="polite"></p></form>
+    </section>
+  </main>
+  <footer>
+    <p>North Star Bakery — Handmade for our neighborhood.</p>
+    <p>This student project uses sample business details.</p>
+  </footer>
+</body>
+</html>

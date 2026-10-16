@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | North Star Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <p>North Star Bakery</p>
+    <h1>Breads, pastries, and cakes</h1>
+  </header>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" aria-current="page">Bakery products</a></li>
+      <li><a href="about.html">About our bakery</a></li>
+      <li><a href="contact.html">Contact and preorder requests</a></li>
+    </ul>
+  </nav>
+  <main id="main-content">
+    <p>Find an everyday favorite or request something for a special occasion.
+      Prices below are sample ranges; ask us to confirm your selection.</p>
+    <section>
+      <h2>Breads</h2>
+      <p>Handmade loaves for breakfast, sandwiches, and family meals.
+        Sample range: $5–$10 per loaf.</p>
+      <img src="media/bakery-bread.jpg"
+        alt="Bread offered by North Star Bakery" width="600">
+      <figure>
+        <img src="media/bakery-signature-loaf.jpg"
+          alt="North Star Bakery signature loaf" width="600">
+        <figcaption>Our Signature Loaf is a featured bread for sharing
+          around the table.</figcaption>
+      </figure>
+    </section>
+    <section>
+      <h2>Pastries</h2>
+      <p>Individual treats for a morning stop or an afternoon break.
+        Sample range: $3–$6 each.</p>
+    </section>
+    <section>
+      <h2>Cakes</h2>
+      <p>Celebration cakes for birthdays and neighborhood gatherings.
+        Sample range: $25–$65, depending on size and details.</p>
+    </section>
+    <section>
+      <h2>Request your order</h2>
+      <p>Tell us your items, quantities, pickup date, and allergy concerns.
+        A request is not confirmed until the bakery replies.</p>
+      <a href="contact.html">Send a preorder inquiry</a>
+    </section>
+    <section aria-labelledby="favorites-heading">
+      <h2 id="favorites-heading">Save your bakery favorites</h2>
+      <p>Keep a list to help plan your next preorder inquiry.</p>
+      <ul id="favorite-products"></ul>
+      <p id="favorite-summary" role="status" aria-live="polite"></p>
+      <p id="storage-note"></p>
+      <noscript>Enable JavaScript to save favorites in this browser.</noscript>
+    </section>
+  </main>
+  <footer>
+    <p>North Star Bakery — Handmade for our neighborhood.</p>
+    <p>This student project uses sample business details.</p>
+  </footer>
+</body>
+</html>

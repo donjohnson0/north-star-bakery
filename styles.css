@@ -1,0 +1,81 @@
+/* Mobile first: one shared stylesheet for the four bakery pages. */
+:root {
+  --cream: #fff8f0;
+  --brown: #6b3e26;
+  --peach: #d88c5a;
+  --charcoal: #2f2a26;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+a { color: var(--brown); text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: .18em; }
+a:focus-visible, input:focus-visible, select:focus-visible,
+textarea:focus-visible, button:focus-visible {
+  outline: 3px solid var(--brown);
+  outline-offset: 4px;
+}
+.skip-link { display: inline-block; margin: .75rem 1rem; }
+header, nav, main, footer {
+  width: min(100% - 2rem, 70rem);
+  margin-inline: auto;
+}
+header { padding-block: 1.5rem; border-top: 6px solid var(--peach); }
+header p { font-weight: bold; letter-spacing: .08em; text-transform: uppercase; }
+h1, h2, h3 { font-family: Georgia, serif; line-height: 1.2; color: var(--brown); }
+h1 { font-size: 2.25rem; max-width: 22ch; margin: .5rem 0; }
+h2 { font-size: 1.65rem; margin-top: 0; }
+h3 { font-size: 1.2rem; }
+p { max-width: 65ch; }
+nav ul { display: flex; flex-direction: column; gap: .5rem; padding: 0; list-style: none; }
+nav a {
+  display: block;
+  padding: .7rem 1rem;
+  border: 1px solid var(--brown);
+  border-radius: .35rem;
+  font-weight: bold;
+}
+nav a[aria-current="page"] { color: var(--cream); background: var(--brown); }
+main { display: flex; flex-direction: column; gap: 1.25rem; padding-block: 1.5rem 3rem; }
+main > p { margin: 0; }
+section { padding: 1.25rem; border: 1px solid var(--peach); border-radius: .6rem; min-width: 0; }
+img { display: block; max-width: 100%; height: auto; border-radius: .4rem; }
+picture { display: block; }
+figure { margin: 1.5rem 0 0; }
+figcaption { font-size: .95rem; margin-top: .6rem; }
+audio, video { width: 100%; max-width: 36rem; }
+form { max-width: 38rem; }
+fieldset { min-width: 0; margin: 1rem 0; padding: 1rem; border: 1px solid var(--brown); }
+legend, label { font-weight: bold; }
+label { display: block; margin-bottom: .35rem; }
+input, select, textarea, button { font: inherit; }
+input, select, textarea {
+  display: block; width: 100%; padding: .75rem;
+  border: 1px solid var(--brown); border-radius: .25rem;
+  background: var(--cream); color: var(--charcoal);
+}
+textarea { resize: vertical; }
+button { background: var(--brown); color: var(--cream); border: 0; border-radius: .35rem; padding: .85rem 1.25rem; cursor: pointer; }
+footer { border-top: 2px solid var(--peach); padding-block: 1.5rem; font-size: .95rem; }
+/* Wider screens: wrap the menu and arrange content sections side by side. */
+@media (min-width: 48rem) {
+  header { padding-block: 2.5rem; }
+  h1 { font-size: 3.5rem; }
+  nav ul { flex-direction: row; flex-wrap: wrap; gap: .75rem; }
+  main { flex-direction: row; flex-wrap: wrap; gap: 1.5rem; }
+  main > p, main > img { flex-basis: 100%; }
+  main > section { flex: 1 1 calc(50% - 1.5rem); }
+  section { padding: 1.75rem; }
+  .contact-page main > section:first-of-type { flex: 1 1 30%; }
+  .contact-page main > section:last-of-type { flex: 2 1 60%; }
+}
+
+#favorite-products { display:flex; flex-wrap:wrap; gap:.75rem; list-style:none; padding:0; }
+.field-error { display:block; color:var(--brown); font-weight:bold; margin-top:.35rem; }
+[aria-invalid="true"] { border:2px solid var(--brown); }
